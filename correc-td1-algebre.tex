@@ -1,0 +1,184 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{J.Riton}
+\title{Correction TD 1 Algèbre}
+\begin{document}
+\newcounter{mycpt}
+\setcounter{mycpt}{1}
+
+\section{Correction}
+\paragraph{Exercice \arabic{mycpt}\addtocounter{mycpt}{1}}
+\subparagraph{1}
+
+a)
+
+La proposition $\text{non}(P \text{ et } Q)$ et $(non\, P) \text{ ou }(\text{non } Q)$ sont équivalentes si ces deux propositions sont vraies en même temps, c'est-à-dire qu'elles présentent les mêmes tables de vérités.
+
+La table de vérité de $\text{non}(P\text{ et } Q)$ est
+$$
+\begin{array}{|l|l|c|c|}
+P & Q & P \text{ et } Q & \text{non}(P\text{ et }Q)\\
+\hline
+0 & 0 & 0 & 1\\
+0 & 1 & 0 & 1\\
+1 & 0 & 0 & 1\\
+1 & 1 & 1 & 0\\
+\end{array} 
+$$
+
+\newcommand{\ou}{\text{ ou }}
+\newcommand{\non}{\text{non }}
+\newcommand{\et}{\text{ et }}
+La table de vérité de $((\non P)\ou (\non Q))$ est
+$$
+\begin{array}{|l|l|c|c|c|}
+P & Q & \non P & \non Q & \non P\ou \non Q\\
+\hline
+0 & 0 & 1 & 1 & 1\\
+0 & 1 & 1 & 0 & 1\\
+1 & 0 & 0 & 1 & 1\\
+1 & 1 & 0 & 0 & 0\\
+\end{array} 
+$$
+
+b)
+
+La proposition $(P \ou (Q\et R))$ et $(( P \ou Q) \et(P \ou R)$ sont équivalentes si ces deux propositions sont vraies en même temps, c'est-à-dire qu'elles présentent les mêmes tables de vérités.
+
+La table de vérité de $(P \ou (Q\et R))$ est
+$$
+\begin{array}{|l|l|c|c|c|}
+P & Q & R  & (Q \et R) & (P \ou (Q\et R)) \\
+\hline
+0&0 & 0 & 0 & 0\\
+0&0 & 1 & 0 & 0\\
+0&1 & 0 & 0 & 0\\
+0&1 & 1 & 1 & 1\\
+1&0 & 0 & 0 & 1\\
+1&0 & 1 & 0 & 1\\
+1&1 & 0 & 0 & 1\\
+1&1 & 1 & 1 & 1\\
+\end{array} 
+$$
+
+La table de vérité de $(( P \ou Q) \et(P \ou R))$ est
+$$
+\begin{array}{|l|l|c|c|c|c|}
+P & Q &  R  & P\ou Q & P\ou R & (( P \ou Q) \et(P \ou R))\\
+\hline
+0&0 & 0 & 0 & 0 & 0\\
+0&0 & 1 & 0 & 1 & 0\\
+0&1 & 0 & 1 & 0 & 0\\
+0&1 & 1 & 1 & 1 & 1\\
+1&0 & 0 & 1 & 1 & 1\\
+1&0 & 1 & 1 & 1 & 1\\
+1&1 & 0 & 1 & 1 & 1\\
+1&1 & 1 & 1 & 1 & 1\\
+\end{array} 
+$$
+
+
+\subparagraph{2)}
+$ P \Rightarrow Q $ a pour valeur de vérité Faux (ou 1) si et seulement si $P$ et vrai et que $Q$ est fausse.
+Ainsi  la négation de $ P \Rightarrow Q $ est $P et non(Q)$.
+
+On peut le vérifier avec les tables de vérité:
+$$
+\begin{array}{|l|l|c|c|c|}
+P & Q  & \non Q &  P\et \non Q\\
+\hline
+0 & 0 & 1 & 0 \\
+0 & 1 & 0 & 0 \\
+1 & 0 & 1 & 1 \\
+1 & 1 & 0 & 0 \\
+\end{array} 
+$$
+et
+$$
+\begin{array}{|l|l|c|c|c|}
+P & Q  & P\Rightarrow Q &   \non (P\Rightarrow Q)\\
+\hline
+0 & 0 & 1 & 0 \\
+0 & 1 & 1 & 0 \\
+1 & 0 & 0 & 1 \\
+1 & 1 & 1 & 0 \\
+\end{array} 
+$$
+
+
+\paragraph{Exercice \arabic{mycpt}\addtocounter{mycpt}{1}}
+\subparagraph{1.}
+L'implication a pour valeur de vérité "vrai" lorsque $a=1$ et $b=2$:
+$"a<b"$ est vrai et $"a^2<b^2$ est vrai aussi. 
+
+L'implication a pour valeur de vérité "vrai" lorsque $a=4$ et $b=3$:
+$"a<b"$ est fausse et $"a^2<b^2$ est fausse aussi.
+
+L'implication a pour valeur de vérité "fausse" lorsque $a=-1$ et $b=0$:
+$"a<b"$ est vrai et $"a^2<b^2$ est fausse aussi.
+
+\subparagraph{2.}
+$$
+\begin{array}{ccc}
+\underbrace{P} & \Rightarrow & \underbrace{Q} \\
+"hypoth\grave ese" &   &   "conclusion" \\
+\end{array}
+$$
+
+L'implication précédente est incorrecte (hypothèse vraie et conclusion fausse pour certaines valeurs de $a$ et de $b$).
+
+
+
+
+$a=-1$ et $b=0$ constitue un contre-exemple.
+
+Cette implication devient correcte si l'on restreint les paramètres $a$ et $b$ à des nombres positifs (ou à des sous-ensembles de nombres positifs). 
+
+En effet, 
+$$ b^2>a^2 \Leftrightarrow b^2-a^2>0 \Leftrightarrow (b-a)(b+a)>0 \Leftrightarrow (b-a>0 \et a+b>0) \ou (b-a<0 \et b+a<0)$$
+
+La chaîne de proposition ci-dessus est vérifié dès que le dernier maillon est vérifié.
+On a un "ou" : disjonction de cas , comme $"b-a<0"$ n'est jamais vérifié il faut que $"b-a>0 \et a+b>0"$ le soit.
+On a un "et" : conjonction, comme  $"b-a>0"$ est toujours vérifié (c'est l'hypothèse), il faut et il suffit que $"a+b>0"$ soit vérifiée. (on peut aussi avoir $a\in \left\lbrace 1\right\rbrace $et $b\in \left] -1,+\infty\right[$  ou
+une partie dans la surface grisée ci-dessous (dessiner la partie $\left\lbrace a+b>0 \right\rbrace $).
+
+
+\begin{tikzpicture}
+
+\end{tikzpicture}
+
+\paragraph{Exercice \arabic{mycpt}\addtocounter{mycpt}{1}}
+\subparagraph{a)}
+
+Ici, il faut raisonner.
+
+On suppose que $P$ est vraie et il faut démontrer que $Q$ est vrai.
+ 
+
+\section{Porte logique}
+\subsection{Information}
+Codage NRZ : on a une tension minimum et une tension maximum: disons 0V et 5V.
+La tension au sein d'une cellule d'information varie entre le minimum et le maximum.
+Une tension en deça d'un certain seuil (disons 1V) donne l'information 0.
+Une tension au dela d'un certain seuil (disons 4V) donne l'information 1.
+\subsection{Porte logique}
+Une porte logique est un circuit recevant un ou plusieurs bit en entrée et renvoie un bit en sortie.
+\subsection{Transistor}
+\begin{tikzpicture}
+\draw (0,0) -- (3,0) -- (3,1);
+\draw (3.5,1.25) -- (3.75,1.25) -- (3.75,2);
+\draw (3.5,.75) -- (3.75,.75) -- (3.75,0);
+\draw (0,0) -- (3,0) -- (3,-1);
+\draw (3.5,-1.25) -- (3.75,-1.25) -- (3.75,-2);
+\draw (3.5,-.75) -- (3.75,-.75) -- (3.75,0);
+\draw (3.75, 0) -- (5.75,0);
+\end{tikzpicture}
+\end{document}
