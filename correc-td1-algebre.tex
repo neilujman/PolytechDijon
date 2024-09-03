@@ -161,9 +161,46 @@ une partie dans la surface grisée ci-dessous (dessiner la partie $\left\lbrace 
 Ici, il faut raisonner.
 
 On suppose que $P$ est vraie et il faut démontrer que $Q$ est vrai.
- 
+
+Supposons alors que la proposition s'écrivant $"\forall x\in \mathbb{R}, f(x)=0"$ soit vraie.
+Ainsi, la propriété $f(x)=0$ est valide pour tout $x\in \mathbb{R}$. Ce qui veut dire que l'image par la fonction $f$ de $x$ vaut $0$ pour tout $x$ réel. En particulier, pour $x=0$. Ainsi il existe au moins un $x$ pour lequel son image est $0$.
+
+\subparagraph{b)}
+On veut ici la réciproque de $P\Rightarrow Q$. \`A savoir que $Q\Rightarrow P$.
+On veut savoir si l'existence d'un réel pour lequel son image par $f$ est $0$ implique que tous les autres nombres réels ont pour image $0$.
+Ce qui est le cas lorsque nous considérons la fonction nulle
+$$f:\mathbb{R}\rightarrow \mathbb{R}, x\mapsto 0$$.
+Si $f$ n'est pas la fonction nulle, alors il existe un nombre pour lequel son image est non nul, c'est-à-dire que $P$ est mis en défaut.
+
+\subparagraph{c)}
+Lorsque $Q$ vraie, il y a un certain $x_0\in\mathbb{R}$ tel que $f(x_0)=0$. $f(x_0)$ ne vérifie alors ni $f(x_0)<0$ ni $f(x_0)>0$. Ce qui met en défaut $R$. Ainsi, dans $Q\Rightarrow R$ l'hypothèse $Q$ est vraie sans que la conclusion $R$ le soit. Donc $Q\Rightarrow R$ n'est pas exacte.
+
+\subparagraph{d)}
+$"non(R)"$ se traduit par $"\exists x \in \mathbb{R} , f(x) \geq 0 et \exists x\in \mathbb{R} f(x) \leq 0"$.
+
+Soit alors $x_1 \in \mathbb{R}$ tel que $f(x_1)\geq 0$ . Si $f(x_1)=0$ alors $x_1$ convient pour vérifier $Q$. Sinon $f(x_1)>0$. 
+Maintenant, soit $x_2\in \mathbb{R}$ tel que $f(x_2)\leq 0$. Si $f(x_2)=0$ alors $x_2$ convient pour vérifier $Q$. Sinon $f(x_2)<0$.
+
+Il nous reste donc le cas où ni $f(x_1)=0$ ni $f(x_2)=0$. On a donc $f(x_1)>0$ et $f(x_2)<0$.
+
+Par hypothèse, $f$ est continue. Le théorème des valeurs intermédiaires affirme donc qu'il existe $x_0$ dans l'intervalle ouvert borné par $x_1$ et $x_2$ tel que $f(x_0)=0$.
+
+
+\subparagraph{e)}
+$"non(Q)"$ exprime $\forall x \in \mathbb{R}, f(x)\neq 0$.
+
+$"non(P)"$ exprime $\exists x \in \mathbb{R}, f(x)\neq 0$.
+
+On raisonne comme pour $"P\Rightarrow Q"$.
 
 \section{Porte logique}
+
+\subsection{Algèbre de Boole}
+Approche algébrique de la logique.
+
+$B$ est un ensemble à deux éléments noté $B=\left\lbrace V, F \right\rbrace$.
+
+
 \subsection{Information}
 Codage NRZ : on a une tension minimum et une tension maximum: disons 0V et 5V.
 La tension au sein d'une cellule d'information varie entre le minimum et le maximum.
